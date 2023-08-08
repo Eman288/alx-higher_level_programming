@@ -5,5 +5,5 @@ while i < 100:
         print("{}".format(i))
         i += 1
     else:
-        print("{:02}".format(i), end=",")
+        print("{:02}".format(i), end=", ")
         i += 1
