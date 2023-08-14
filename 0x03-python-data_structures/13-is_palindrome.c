@@ -1,10 +1,33 @@
 #include "lists.h"
 int is_palindrome(listint_t **head)
 {
-	while (*head->next != NULL)
+	listint_t *node = *head, *temp;
+
+	int c, i, t;
+
+	c = 0;
+	i = 0;
+
+	temp = node;
+	while (temp != NULL)
 	{
-		printf("%d\n", *head->n);
-		*head = *head->next;
+		c++;
+		temp = temp->next;
 	}
-	return (0);
+	t = c - i - 1;
+	while (t > 0)
+	{
+		temp = node;
+		while (t > 0)
+		{
+			temp = temp->next;
+			t--;
+		}
+		if (node->n != temp->n)
+			return (0);
+		i += 2;
+		t = c - i - 1;
+		node = node->next;
+	}
+	return (1);
 }
