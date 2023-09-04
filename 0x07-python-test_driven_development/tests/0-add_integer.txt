@@ -1,0 +1,32 @@
+====================
+add_integer function
+====================
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(6)
+104
+>>> add_integer(12.5555, 5)
+17
+>>> add_integer(1.095555, 3.11)
+4
+>>> add_integer(0.0005)
+98
+>>> add_integer("kkkkkkkkk")
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(None, 22)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer('a')
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> add_integer(5, 'j')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(4.9,"kkkkkkkkk")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer(22, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
