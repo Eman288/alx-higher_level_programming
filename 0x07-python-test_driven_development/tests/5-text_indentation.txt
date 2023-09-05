@@ -1,0 +1,52 @@
+=========================
+text_indentation function
+=========================
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("""Hello? are you ok? no?     fine.""")
+Hello?
+<BLANKLINE>
+are you ok?
+<BLANKLINE>
+no?
+<BLANKLINE>
+fine.
+<BLANKLINE>
+>>> text_indentation(7)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation("?.:")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_indentation("       ?      .                :               ")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_indentation("      ?      .                :            nnnn   ")
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> text_indentation(":k:lll???..s")
+:
+<BLANKLINE>
+k:
+<BLANKLINE>
+lll?
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
