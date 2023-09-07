@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+"""a module to create a rectangle and be able to get info"""
+
+
 class Rectangle:
     """
     a class to create a rectangle with width and hight
