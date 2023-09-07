@@ -8,6 +8,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """a function to initialize the variables
         width => the width
