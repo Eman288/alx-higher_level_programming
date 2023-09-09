@@ -9,16 +9,8 @@ def add_integer(a, b=98):
     ``b`` is the second value
     returns a + b
     """
-    if a is None:
+    if a is None or isinstance(a, (int, float)) is not True:
         raise TypeError("a must be an integer")
-    elif b is None:
-        raise TypeError("b must be an integer")
-    try:
-        a = a + 0
-    except (TypeError, ValueError):
-        raise TypeError("a must be an integer")
-    try:
-        b = b + 0
-    except (TypeError, ValueError):
+    elif b is None or isinstance(b, (int, float)) is not True:
         raise TypeError("b must be an integer")
     return int(a) + int(b)
