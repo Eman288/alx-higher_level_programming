@@ -3,6 +3,8 @@
 
 
 def is_same_class(obj, a_class):
+    """ af unction that check if an obj is of type of the class"""
+
     if type(obj) == a_class:
             return True
     return False
