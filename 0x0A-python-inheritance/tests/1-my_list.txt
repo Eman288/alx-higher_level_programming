@@ -1,0 +1,13 @@
+================================================
+a function in a class to print a NEW sorted list
+================================================
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(21)
+>>> my_list.print_sorted()
+[-1, 21]
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[-1, 0, 21]
