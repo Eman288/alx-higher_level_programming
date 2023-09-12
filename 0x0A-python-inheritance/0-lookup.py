@@ -5,4 +5,4 @@
 def lookup(obj):
     """a function to return the attributes of an obj"""
 
-    return type(obj).__dict__
+    return dir(obj)
