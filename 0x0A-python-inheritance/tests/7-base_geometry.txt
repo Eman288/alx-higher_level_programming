@@ -18,22 +18,22 @@ Exception: area() is not implemented
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", -7)
 Traceback (most recent call last):
-    	      ...
-ValueError: name must be greater than 0
+	...
+ValueError: my_int must be greater than 0
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 5.6)
 Traceback (most recent call last):
-              ...
-ValueError: name must be greater than 0
+	...
+TypeError: my_int must be an integer
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 5)
 >>> bg = BaseGeometry()
->>> bg.integer_validator()
+>>> bg.integer_validator("name")
 Traceback (most recent call last):
 	...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg = BaseGeometry()
 >>> bg.integer_validator()
 Traceback (most recent call last):
         ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
