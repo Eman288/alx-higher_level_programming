@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-MyList = __import__('1-my_list').MyList
+Rectangle = __import__('8-rectangle').Rectangle
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-my_list = MyList()
-print(my_list)
-my_list.append(3)
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.print_sorted()
-print(my_list)
+print(issubclass(Rectangle, BaseGeometry))
