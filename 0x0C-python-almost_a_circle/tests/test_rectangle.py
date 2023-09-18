@@ -87,5 +87,12 @@ class TestRectangle_y(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
                 Rectangle(3, 2, 3, -3)
 
+class TestRectangle_process(unittest.TestCase):
+    """to test most of the process in the class"""
+    def test_area(self):
+        """a function to test area function in normal mode"""
+        a = Rectangle(2, 3)
+        self.assertEqual(a.area(), 6)
+
 if __name__ == "__main__":
         unittest.main()
