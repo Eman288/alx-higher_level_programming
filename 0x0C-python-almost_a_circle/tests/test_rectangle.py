@@ -11,6 +11,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 """the class we will test on"""
 
+
 class TestRectangle_init(unittest.TestCase):
     """the main testing class"""
 
