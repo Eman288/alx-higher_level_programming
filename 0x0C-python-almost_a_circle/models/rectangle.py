@@ -32,7 +32,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.y = y
         Base.__init__(self, id)
-    
+
     @property
     def width(self):
         """get the width"""
@@ -46,12 +46,12 @@ class Rectangle(Base):
         if width <= 0:
             raise ValueError("width must be > 0")
         self.__width = width
-    
+
     @property
     def height(self):
         """get the height"""
         return self.__height
-    
+
     @height.setter
     def height(self, height):
         """set the height"""
@@ -65,7 +65,7 @@ class Rectangle(Base):
     def x(self):
         """get the x"""
         return self.__x
-    
+
     @x.setter
     def x(self, x):
         """set the x"""
@@ -79,7 +79,7 @@ class Rectangle(Base):
     def y(self):
         """get the y"""
         return self.__y
-    
+
     @y.setter
     def y(self, y):
         """set the y"""
@@ -99,11 +99,13 @@ class Rectangle(Base):
             print('')
         for i in range(self.__height):
             for hori in range(self.__x):
-                    print(' ', end="")
+                print(' ', end="")
             for j in range(self.__width):
                 print("#", end="")
             print('')
 
     def __str__(self):
         """dispaly the Rectangle"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        s = "[Rectangle] ({}) {}/{} - {}/{}"
+        m = s.format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return m
