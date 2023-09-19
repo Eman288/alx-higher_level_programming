@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Rectangle module"""
 
 
@@ -95,7 +95,12 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle in a # form"""
+        for virtical in range(self.__y):
+            print('')
         for i in range(self.__height):
+            for hori in range(self.__x):
+                if hori != self.__x - 1:
+                    print(' ', end="")
             for j in range(self.__width):
                 print("#", end="")
             print('')
