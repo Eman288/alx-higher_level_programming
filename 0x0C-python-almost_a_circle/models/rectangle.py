@@ -99,7 +99,6 @@ class Rectangle(Base):
             print('')
         for i in range(self.__height):
             for hori in range(self.__x):
-                if hori != self.__x - 1:
                     print(' ', end="")
             for j in range(self.__width):
                 print("#", end="")
