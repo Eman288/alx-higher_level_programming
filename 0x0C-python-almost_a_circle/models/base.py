@@ -33,6 +33,9 @@ class Base:
         name = cls.__name__ + ".json"
         li = list()
         with open(name, 'w', encoding="utf-8") as f:
-            for i in list_objs:
-                li.append(i.to_dictionary())
-            f.write(Base.to_json_string(li))
+            if list_objs is None:
+                f.write("[]")
+            else:
+                for i in list_objs:
+                    li.append(i.to_dictionary())
+                f.write(Base.to_json_string(li))
