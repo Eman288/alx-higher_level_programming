@@ -27,3 +27,32 @@ class Square(Rectangle):
         """a function to set the width and the height with size"""
         self.width = val
         self.height = val
+
+    def update(self, *args, **kwargs):
+        """a function to update the values"""
+        if args is not None and len(args) != 0:
+            j = 0
+            for i in args:
+                if j == 0:
+                    self.id = i
+                    j += 1
+                elif j == 1:
+                    self.width = i
+                    self.height = i
+                    j += 1
+                elif j == 2:
+                    self.x = i
+                    j += 1
+                elif j == 3:
+                    self.y = i
+                    j += 1
+        for i in kwargs:
+            if i == "id":
+                self.id = kwargs.get(i)
+            elif i == "size":
+                self.width = kwargs.get(i)
+                self.height = kwargs.get(i)
+            elif i == "x":
+                self.x = kwargs.get(i)
+            elif i == "y":
+                self.y = kwargs.get(i)
