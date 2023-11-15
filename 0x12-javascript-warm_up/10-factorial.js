@@ -1,6 +1,6 @@
 #!/usr/bin/node
 function Factorial (n) {
-  if (n == 1 || isNaN(n)) {
+  if (n === 1 || isNaN(n)) {
     return 1;
   }
   return Factorial(n - 1) * n;
