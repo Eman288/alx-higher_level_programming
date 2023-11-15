@@ -10,7 +10,7 @@ if (process.argv[2] === undefined || process.argv[3] === undefined) {
     }
   }
   for (let i = 2; i < process.argv.length; i++) {
-    if (process.argv[i] > n && process.argv[i] != m) {
+    if (process.argv[i] > n && process.argv[i] !== m) {
       n = process.argv[i];
     }
   }
