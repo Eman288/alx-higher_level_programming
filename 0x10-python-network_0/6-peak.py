@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""a module"""
+
+
 def find_peak(list_of_integers):
+    """a function to find the peak"""
     if list_of_integers is None:
         return None
     else:
